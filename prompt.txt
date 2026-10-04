@@ -1,0 +1,444 @@
+# ROLE
+
+You are an expert iOS developer, software architect, and technical researcher specializing in Swift, SwiftUI, iOS development, remote build systems, cloud macOS environments, code signing, and IPA distribution.
+
+Your mission is to research, build, and prepare a complete iOS application from scratch using my Windows PC, **without requiring me to own, borrow, access, or operate a Mac**.
+
+You must search the web for current technical information before making important decisions. Find a practical, verified end-to-end workflow that allows me to create the source code, compile the iOS app, sign it, obtain an IPA, and install it on my iPhone while working from Windows.
+
+Do not simply tell me to get a Mac. Research and evaluate alternatives.
+
+# 1. MY SETUP
+
+- Computer: Windows 11 PC.
+- Development environment: Codex.
+- Target phone: iPhone 14 Pro.
+- Target operating system: iOS 26.5.
+- Installation method: SideStore preferred.
+- Apple Developer membership: Free Apple Account preferred.
+- Experience level: Beginner.
+- Existing source code: None required; create everything from scratch.
+- Hardware restriction: I do not want to use a Mac, whether physical or remotely accessed through a desktop session.
+- Cloud services: Potentially acceptable if I can control them from Windows through a browser, command line, or API.
+- Budget: Prefer free solutions. If a paid service is genuinely necessary, identify the cheapest practical option and explain why before recommending it.
+
+# 2. MANDATORY WEB RESEARCH
+
+Before implementing anything, search the web for current information.
+
+Do not rely only on your training data, memory, or outdated tutorials.
+
+Use actual web-search and browser tools available in the environment. Open relevant documentation and verify the claims you rely on.
+
+Prioritize:
+
+1. Official Apple Developer documentation.
+2. Official Xcode release notes.
+3. Official Swift documentation.
+4. Official GitHub Actions documentation.
+5. Official documentation for other CI/CD platforms.
+6. Official SideStore documentation.
+7. Official documentation for code-signing tools and relevant dependencies.
+8. Reputable technical sources when official documentation is insufficient.
+
+Record the URLs and dates of the sources you verify.
+
+If browsing is unavailable, state that clearly. Never pretend to have searched the web.
+
+# 3. RESEARCH ALL PRACTICAL NO-MAC BUILD OPTIONS
+
+Search the web for current solutions to these questions:
+
+- Can a SwiftUI iOS application be compiled on Windows without installing or operating macOS?
+- Can a hosted macOS CI runner compile and sign an iOS app when controlled entirely from Windows?
+- Can GitHub Actions build an iOS app using a hosted macOS runner?
+- What current macOS runners and Xcode versions are available?
+- Can Codemagic, Bitrise, or other hosted iOS build services build a SwiftUI project?
+- Which services offer free build minutes or free tiers?
+- What are the current restrictions on those free tiers?
+- Can a beginner trigger a build through a browser without using a Mac?
+- Can a cloud build export an IPA?
+- Can the resulting IPA be transferred to Windows and then to an iPhone?
+- What signing options work with a free Apple Account?
+- Can an IPA signed through the selected workflow be installed or re-signed using SideStore?
+- Which certificates, provisioning profiles, and Apple Account permissions are required?
+- Are there current tools that can compile SwiftUI projects directly on Windows?
+- What limitations apply to simulators, physical-device testing, and location simulation?
+- Can the entire process be automated with a repository, cloud build configuration, and downloadable artifacts?
+
+Investigate additional options if they are relevant.
+
+## Important distinction
+
+Do not confuse these separate capabilities:
+
+1. Editing Swift source code on Windows.
+2. Compiling an iOS application.
+3. Signing an application.
+4. Exporting an IPA.
+5. Installing the IPA on an iPhone.
+6. Running and debugging the application on the physical device.
+
+Identify which service or tool handles each stage.
+
+# 4. CHOOSE THE BEST WORKING SOLUTION
+
+Compare the researched options in a table.
+
+Include:
+
+- Service or tool.
+- Whether it requires a Mac on my side.
+- Whether it uses a remote Mac or hosted macOS runner.
+- Whether it supports native SwiftUI projects.
+- Whether it can produce an IPA.
+- Signing requirements.
+- Free-tier availability.
+- Current limitations.
+- Whether it supports downloading the build artifact to Windows.
+- Whether it can integrate with SideStore.
+- Official documentation URL.
+
+Do not recommend a service just because it advertises iOS support. Verify that it supports the actual requirements of this project.
+
+Select the simplest practical solution that minimizes cost and manual work.
+
+Prefer a workflow where I can edit the source code in Codex on Windows, trigger a remote build, download the IPA, and install it on my iPhone.
+
+If a fully free and reliable workflow is impossible under my constraints, explain precisely which requirement prevents it and provide the cheapest practical alternative.
+
+Do not silently assume that a paid Apple Developer membership is available.
+
+# 5. BUILD THE APPLICATION FROM SCRATCH
+
+Create a complete native iOS application named:
+
+Waypoint Lab
+
+Suggested bundle identifier:
+
+com.example.waypointlab
+
+Make the identifier easy to replace with a unique identifier that I control.
+
+Use:
+
+- Swift.
+- SwiftUI.
+- MapKit.
+- Core Location when necessary.
+- Public Apple APIs.
+- A maintainable, beginner-friendly project structure.
+
+The app should have a polished interface and work on my iPhone 14 Pro running iOS 26.5.
+
+## Required features
+
+### Interactive map
+
+- Display an interactive map.
+- Support pan and zoom.
+- Allow map-tap coordinate selection.
+- Display the selected coordinates.
+- Show a marker for the selected location.
+- Allow the user to center the map on the actual device location when permission is granted.
+- Handle denied location permission gracefully.
+
+### Manual coordinate entry
+
+- Latitude field.
+- Longitude field.
+- Validate latitude between -90 and 90.
+- Validate longitude between -180 and 180.
+- Display understandable validation errors.
+- Apply valid coordinates to the map.
+- Allow the coordinates to be copied.
+
+### Place search
+
+- Search for cities, addresses, landmarks, and supported places.
+- Display search results.
+- Select a result and reposition the map.
+- Handle empty results and network errors.
+- Use currently supported MapKit APIs.
+- Avoid unnecessary third-party API keys.
+
+### In-app location preview
+
+- Start and stop a location preview.
+- Display the selected location.
+- Clearly indicate whether preview is running.
+- Keep UI state consistent.
+- Cancel active tasks when appropriate.
+
+### Route simulation
+
+- Include multiple route coordinates.
+- Animate a marker between coordinates.
+- Provide adjustable playback speed.
+- Include Play, Pause, Resume, and Stop controls.
+- Display route progress.
+- Handle empty and invalid routes.
+- Include a sample GPX route.
+- Support GPX importing if practical.
+
+### Favorites
+
+- Save named locations.
+- Display saved locations.
+- Select a favorite.
+- Delete favorites.
+- Persist favorites between launches.
+
+### Settings
+
+- Map appearance options where supported.
+- Route playback speed.
+- Location permission information.
+- Application information.
+- Clear explanations of location-simulation limitations.
+
+### Design
+
+- Modern SwiftUI interface.
+- Clean navigation.
+- Dark mode support.
+- Consistent spacing and typography.
+- Appropriate loading and error states.
+- Usable on iPhone 14 Pro.
+- No unnecessary visual clutter.
+
+# 6. LOCATION-SIMULATION LIMITATIONS
+
+Use only public, supported APIs.
+
+The application can provide location selection, route animation, and a simulated location preview inside its own interface.
+
+Do not falsely claim that these features change the iPhone's system GPS location or change what other applications receive.
+
+Do not implement private API hacks, jailbreak dependencies, certificate bypasses, anti-tamper bypasses, or methods designed to defeat third-party applications' location-integrity checks.
+
+Search the web for current official Apple documentation about supported location testing and simulation.
+
+Explain which features work in the installed app and which require a developer testing environment.
+
+# 7. IMPLEMENT THE CHOSEN CLOUD BUILD WORKFLOW
+
+After completing the research and selecting the best solution, implement the necessary configuration files.
+
+Depending on the verified solution, this may include:
+
+- Xcode project files.
+- Swift source files.
+- Asset catalogs.
+- GPX resources.
+- A Git repository configuration.
+- A GitHub Actions workflow.
+- A cloud-build configuration file.
+- Build scripts.
+- Artifact export configuration.
+- Documentation for signing and provisioning.
+- Instructions for securely configuring credentials.
+
+Do not add unnecessary services or dependencies.
+
+If the selected solution uses GitHub Actions or another hosted CI service, configure the workflow to:
+
+1. Obtain the source code.
+2. Select a compatible hosted macOS runner.
+3. Select a compatible Xcode version.
+4. Resolve project dependencies if any exist.
+5. Build the app.
+6. Report compiler errors.
+7. Perform available automated tests.
+8. Archive the app where appropriate.
+9. Sign and export the IPA when the configured credentials and distribution method permit it.
+10. Upload the resulting IPA or archive as a downloadable build artifact.
+11. Preserve useful logs if the build fails.
+
+Verify the current runner labels, supported Xcode versions, artifact syntax, and signing procedure through official documentation before writing the workflow.
+
+Do not hardcode credentials, passwords, private keys, signing certificates, or provisioning profiles into source files or public repositories.
+
+If secrets are required, document the exact secure configuration process.
+
+Do not invent credentials or claim that a cloud service is connected to my account.
+
+# 8. SIGNING AND FREE APPLE ACCOUNT RESEARCH
+
+Search current official documentation to determine what is possible with a free Apple Account.
+
+Investigate:
+
+- Personal Team signing.
+- Provisioning profile restrictions.
+- Device registration requirements.
+- Certificate requirements.
+- Profile expiration.
+- Physical-device installation.
+- IPA export limitations.
+- Compatibility with SideStore.
+- Whether a cloud build can use the necessary signing credentials securely.
+- Whether the selected workflow requires paid membership.
+
+Do not assume that cloud compilation automatically solves signing.
+
+Clearly separate compilation from signing and distribution.
+
+If the chosen workflow cannot produce an IPA compatible with my intended installation method using a free account, explain the exact limitation.
+
+Research whether SideStore can sign or re-sign an appropriate IPA after it has been downloaded.
+
+Use current official SideStore documentation.
+
+Do not recommend an unsupported signing trick as though it were an official workflow.
+
+# 9. SIDELOAD AND INSTALLATION
+
+Prepare a Windows-to-iPhone installation guide based on the verified workflow.
+
+It should explain:
+
+1. How to trigger the remote build.
+2. How to monitor build logs.
+3. How to download the IPA to Windows.
+4. How to transfer the IPA to the iPhone.
+5. How to import it through SideStore if supported.
+6. How to resolve common signing and provisioning errors.
+7. How to handle app refresh and provisioning expiration.
+8. How to verify that the app launches successfully.
+
+If the selected workflow requires a different supported installation method, explain why and provide the exact alternative.
+
+Do not claim that SideStore will accept every exported IPA automatically.
+
+# 10. AUTOMATION AND EASE OF USE
+
+I am a beginner, so minimize manual steps.
+
+Prefer a workflow that allows me to:
+
+1. Open the project in Codex on Windows.
+2. Make changes.
+3. Push or upload the code to the selected build service.
+4. Trigger a build with a simple action.
+5. View the build result.
+6. Download the IPA.
+7. Install the app on my iPhone.
+
+Where practical, create scripts or documented automation to simplify these steps.
+
+Do not automate account creation, bypass service restrictions, expose secrets, or perform actions that require my explicit authorization without asking me.
+
+Clearly identify steps that must be completed manually.
+
+# 11. VALIDATION
+
+Run every meaningful check available in the environment.
+
+Validate:
+
+- Project structure.
+- Swift source.
+- Xcode project configuration.
+- Resource references.
+- GPX XML.
+- Build workflow syntax.
+- Configuration files.
+- Secret-handling practices.
+- Artifact paths.
+- Signing configuration.
+- README accuracy.
+
+Use current documentation to verify workflow syntax and configuration.
+
+If a genuine cloud build can be triggered through available tools and authorized credentials, perform it.
+
+Otherwise, prepare the configuration and tell me exactly how to trigger the first build.
+
+Never claim a build succeeded unless the actual build service reports success.
+
+Never create a fake IPA.
+
+Clearly distinguish:
+
+- Static checks.
+- Workflow validation.
+- Successful cloud compilation.
+- Successful code signing.
+- Successful IPA export.
+- Successful installation on a physical device.
+
+# 12. CREATE COMPLETE DOCUMENTATION
+
+Create a README.md that explains the actual implemented solution.
+
+Include:
+
+- Project overview.
+- Features.
+- Project structure.
+- Web research sources.
+- Date the sources were checked.
+- Why the chosen build solution was selected.
+- Required accounts.
+- Free-tier limitations.
+- Repository setup.
+- Cloud build setup.
+- Secret configuration.
+- Build triggering.
+- Build-log inspection.
+- IPA download.
+- Signing.
+- SideStore installation.
+- Troubleshooting.
+- Known limitations.
+- How to rebuild after changing the code.
+
+Use current official documentation and valid URLs.
+
+Do not invent links, capabilities, or pricing.
+
+# 13. FINAL REPORT
+
+When finished, provide:
+
+1. The complete project directory.
+2. Every file created.
+3. A summary of implemented features.
+4. The web research performed.
+5. The important sources and URLs.
+6. The chosen no-local-Mac build solution.
+7. Why it is the best practical option.
+8. Any service accounts I must create.
+9. Whether the workflow can be free.
+10. The exact configuration I must perform manually.
+11. How to trigger a build from Windows.
+12. How to download the IPA.
+13. How to install it on the iPhone.
+14. Signing and SideStore limitations.
+15. Validation results.
+16. Any remaining issues.
+17. A short checklist of my next actions.
+
+Be honest about anything you could not verify or execute.
+
+# 14. EXECUTION RULES
+
+- Begin by searching the web for current information.
+- Verify the capabilities of each proposed service before choosing it.
+- Create the entire application from scratch.
+- Do not assume an existing project exists.
+- Do not assume I can access a Mac.
+- Do not tell me to open Xcode on a Mac as a required step.
+- Prefer solutions I can control entirely from Windows.
+- Do not stop after writing a plan.
+- Create actual source files and build configuration.
+- Do not fabricate build results.
+- Do not hardcode secrets.
+- Do not invent service features or pricing.
+- Explain technical restrictions accurately.
+- Ask for authorization when an external account connection or other consequential action requires it.
+- If a completely Mac-free workflow is impossible under the specified conditions, identify the precise blocker and provide the closest viable alternative.
+
+**START NOW: Search the web for current Apple, Xcode, Swift, hosted macOS CI, code-signing, and SideStore documentation. Compare the available solutions, select the best practical workflow that requires no Mac on my side, then create the complete application and build configuration.**

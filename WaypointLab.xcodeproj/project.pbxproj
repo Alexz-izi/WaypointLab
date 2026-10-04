@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000012C00000100000001 /* WaypointLabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000012C00000100000001 /* WaypointLabApp.swift */; };
+		A10000022C00000100000002 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000022C00000100000002 /* Waypoint.swift */; };
+		A10000032C00000100000003 /* RoutePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000032C00000100000003 /* RoutePoint.swift */; };
+		A10000042C00000100000004 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000042C00000100000004 /* LocationManager.swift */; };
+		A10000052C00000100000005 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000052C00000100000005 /* SearchService.swift */; };
+		A10000062C00000100000006 /* RouteSimulationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000062C00000100000006 /* RouteSimulationManager.swift */; };
+		A10000072C00000100000007 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000072C00000100000007 /* FavoritesManager.swift */; };
+		A10000082C00000100000008 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000082C00000100000008 /* MainTabView.swift */; };
+		A10000092C00000100000009 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000092C00000100000009 /* MapView.swift */; };
+		A100000A2C0000010000000A /* ManualCoordinateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000A2C0000010000000A /* ManualCoordinateView.swift */; };
+		A100000B2C0000010000000B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000B2C0000010000000B /* SearchView.swift */; };
+		A100000C2C0000010000000C /* RouteSimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000C2C0000010000000C /* RouteSimulationView.swift */; };
+		A100000D2C0000010000000D /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000D2C0000010000000D /* FavoritesView.swift */; };
+		A100000E2C0000010000000E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100000E2C0000010000000E /* SettingsView.swift */; };
+		A100000F2C0000010000000F /* SampleRoute.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B100000F2C0000010000000F /* SampleRoute.gpx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C10000012C00000100000001 /* WaypointLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaypointLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000012C00000100000001 /* WaypointLabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointLabApp.swift; sourceTree = "<group>"; };
+		B10000022C00000100000002 /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
+		B10000032C00000100000003 /* RoutePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePoint.swift; sourceTree = "<group>"; };
+		B10000042C00000100000004 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B10000052C00000100000005 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		B10000062C00000100000006 /* RouteSimulationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSimulationManager.swift; sourceTree = "<group>"; };
+		B10000072C00000100000007 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		B10000082C00000100000008 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		B10000092C00000100000009 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B100000A2C0000010000000A /* ManualCoordinateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCoordinateView.swift; sourceTree = "<group>"; };
+		B100000B2C0000010000000B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		B100000C2C0000010000000C /* RouteSimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSimulationView.swift; sourceTree = "<group>"; };
+		B100000D2C0000010000000D /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		B100000E2C0000010000000E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B100000F2C0000010000000F /* SampleRoute.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SampleRoute.gpx; sourceTree = "<group>"; };
+		B10000102C00000100000010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D10000012C00000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E10000012C00000100000001 = {
+			isa = PBXGroup;
+			children = (
+				E10000022C00000100000002 /* WaypointLab */,
+				E10000072C00000100000007 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E10000022C00000100000002 /* WaypointLab */ = {
+			isa = PBXGroup;
+			children = (
+				B10000012C00000100000001 /* WaypointLabApp.swift */,
+				E10000032C00000100000003 /* Models */,
+				E10000042C00000100000004 /* Services */,
+				E10000052C00000100000005 /* Views */,
+				E10000062C00000100000006 /* Resources */,
+			);
+			path = WaypointLab;
+			sourceTree = "<group>";
+		};
+		E10000032C00000100000003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B10000022C00000100000002 /* Waypoint.swift */,
+				B10000032C00000100000003 /* RoutePoint.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E10000042C00000100000004 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B10000042C00000100000004 /* LocationManager.swift */,
+				B10000052C00000100000005 /* SearchService.swift */,
+				B10000062C00000100000006 /* RouteSimulationManager.swift */,
+				B10000072C00000100000007 /* FavoritesManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E10000052C00000100000005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B10000082C00000100000008 /* MainTabView.swift */,
+				B10000092C00000100000009 /* MapView.swift */,
+				B100000A2C0000010000000A /* ManualCoordinateView.swift */,
+				B100000B2C0000010000000B /* SearchView.swift */,
+				B100000C2C0000010000000C /* RouteSimulationView.swift */,
+				B100000D2C0000010000000D /* FavoritesView.swift */,
+				B100000E2C0000010000000E /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E10000062C00000100000006 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B100000F2C0000010000000F /* SampleRoute.gpx */,
+				B10000102C00000100000010 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E10000072C00000100000007 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C10000012C00000100000001 /* WaypointLab.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F10000012C00000100000001 /* WaypointLab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = G10000022C00000100000002 /* Build configuration list for PBXNativeTarget "WaypointLab" */;
+			buildPhases = (
+				H10000012C00000100000001 /* Sources */,
+				D10000012C00000100000001 /* Frameworks */,
+				H10000022C00000100000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaypointLab;
+			productName = WaypointLab;
+			productReference = C10000012C00000100000001 /* WaypointLab.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					F10000012C00000100000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = G10000012C00000100000001 /* Build configuration list for PBXProject "WaypointLab" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E10000012C00000100000001;
+			productRefGroup = E10000072C00000100000007 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F10000012C00000100000001 /* WaypointLab */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		H10000022C00000100000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A100000F2C0000010000000F /* SampleRoute.gpx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		H10000012C00000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000012C00000100000001 /* WaypointLabApp.swift in Sources */,
+				A10000022C00000100000002 /* Waypoint.swift in Sources */,
+				A10000032C00000100000003 /* RoutePoint.swift in Sources */,
+				A10000042C00000100000004 /* LocationManager.swift in Sources */,
+				A10000052C00000100000005 /* SearchService.swift in Sources */,
+				A10000062C00000100000006 /* RouteSimulationManager.swift in Sources */,
+				A10000072C00000100000007 /* FavoritesManager.swift in Sources */,
+				A10000082C00000100000008 /* MainTabView.swift in Sources */,
+				A10000092C00000100000009 /* MapView.swift in Sources */,
+				A100000A2C0000010000000A /* ManualCoordinateView.swift in Sources */,
+				A100000B2C0000010000000B /* SearchView.swift in Sources */,
+				A100000C2C0000010000000C /* RouteSimulationView.swift in Sources */,
+				A100000D2C0000010000000D /* FavoritesView.swift in Sources */,
+				A100000E2C0000010000000E /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		J10000012C00000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		J10000022C00000100000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		J10000032C00000100000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WaypointLab/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Waypoint Lab";
+				INFOPLIST_KEY_LSRequiresIPhoneOS = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Waypoint Lab uses your location to display your current position on the map.";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.waypointlab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		J10000042C00000100000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WaypointLab/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Waypoint Lab";
+				INFOPLIST_KEY_LSRequiresIPhoneOS = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Waypoint Lab uses your location to display your current position on the map.";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.waypointlab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		G10000012C00000100000001 /* Build configuration list for PBXProject "WaypointLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				J10000012C00000100000001 /* Debug */,
+				J10000022C00000100000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		G10000022C00000100000002 /* Build configuration list for PBXNativeTarget "WaypointLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				J10000032C00000100000003 /* Debug */,
+				J10000042C00000100000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

@@ -1,0 +1,93 @@
+name: Build Waypoint Lab iOS IPA
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      bundle_id:
+        description: 'Override Bundle Identifier (optional)'
+        required: false
+        default: 'com.example.waypointlab'
+
+jobs:
+  build-ipa:
+    name: Compile & Package iOS IPA
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Print Build Environment Info
+        run: |
+          echo "=== System Info ==="
+          sw_vers
+          uname -a
+          echo "=== Xcode Toolchain ==="
+          xcodebuild -version
+          xcrun swift -version
+
+      - name: Configure Bundle Identifier
+        if: "${{ github.event.inputs.bundle_id != '' }}"
+        run: |
+          NEW_ID="${{ github.event.inputs.bundle_id }}"
+          echo "Setting bundle identifier to: $NEW_ID"
+          sed -i '' "s/PRODUCT_BUNDLE_IDENTIFIER = com.example.waypointlab;/PRODUCT_BUNDLE_IDENTIFIER = $NEW_ID;/g" WaypointLab.xcodeproj/project.pbxproj
+
+      - name: Build Application with xcodebuild
+        run: |
+          mkdir -p build_output
+          xcodebuild \
+            -project WaypointLab.xcodeproj \
+            -scheme WaypointLab \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -derivedDataPath build_output \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build | xcpretty || xcodebuild \
+            -project WaypointLab.xcodeproj \
+            -scheme WaypointLab \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -derivedDataPath build_output \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build
+
+      - name: Package App into IPA Container
+        run: |
+          APP_PATH=$(find build_output -name "WaypointLab.app" -type d | head -n 1)
+          if [ -z "$APP_PATH" ]; then
+            echo "ERROR: WaypointLab.app not found in build output!"
+            exit 1
+          fi
+          echo "Found app bundle at: $APP_PATH"
+
+          mkdir -p Payload
+          cp -r "$APP_PATH" Payload/
+          zip -r -9 WaypointLab.ipa Payload
+          rm -rf Payload
+
+          echo "=== IPA Package Details ==="
+          ls -lh WaypointLab.ipa
+          shasum -a 256 WaypointLab.ipa
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WaypointLab-iOS-IPA
+          path: WaypointLab.ipa
+          retention-days: 30
+
+      - name: Upload Failure Logs
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-failure-logs
+          path: build_output
+          retention-days: 7

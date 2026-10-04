@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="WaypointLab" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Cupertino Innovation Loop</name>
+    <desc>Sample developer trajectory around Apple Park and surrounding Cupertino avenues</desc>
+    <time>2026-10-04T12:00:00Z</time>
+  </metadata>
+  <trk>
+    <name>Cupertino Innovation Loop Track</name>
+    <trkseg>
+      <trkpt lat="37.334900" lon="-122.009020">
+        <ele>48.5</ele>
+        <time>2026-10-04T12:00:00Z</time>
+      </trkpt>
+      <trkpt lat="37.335500" lon="-122.007500">
+        <ele>49.0</ele>
+        <time>2026-10-04T12:00:10Z</time>
+      </trkpt>
+      <trkpt lat="37.336100" lon="-122.005800">
+        <ele>49.5</ele>
+        <time>2026-10-04T12:00:20Z</time>
+      </trkpt>
+      <trkpt lat="37.335800" lon="-122.003500">
+        <ele>50.0</ele>
+        <time>2026-10-04T12:00:30Z</time>
+      </trkpt>
+      <trkpt lat="37.334200" lon="-122.002800">
+        <ele>50.2</ele>
+        <time>2026-10-04T12:00:40Z</time>
+      </trkpt>
+      <trkpt lat="37.332500" lon="-122.003200">
+        <ele>50.5</ele>
+        <time>2026-10-04T12:00:50Z</time>
+      </trkpt>
+      <trkpt lat="37.331200" lon="-122.004900">
+        <ele>51.0</ele>
+        <time>2026-10-04T12:01:00Z</time>
+      </trkpt>
+      <trkpt lat="37.330800" lon="-122.007500">
+        <ele>51.2</ele>
+        <time>2026-10-04T12:01:10Z</time>
+      </trkpt>
+      <trkpt lat="37.331600" lon="-122.010500">
+        <ele>50.8</ele>
+        <time>2026-10-04T12:01:20Z</time>
+      </trkpt>
+      <trkpt lat="37.333200" lon="-122.011800">
+        <ele>49.6</ele>
+        <time>2026-10-04T12:01:30Z</time>
+      </trkpt>
+      <trkpt lat="37.334900" lon="-122.009020">
+        <ele>48.5</ele>
+        <time>2026-10-04T12:01:40Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
